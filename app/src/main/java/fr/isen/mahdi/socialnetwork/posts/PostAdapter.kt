@@ -7,6 +7,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import fr.isen.mahdi.socialnetwork.databinding.PostCellBinding
 import fr.isen.mahdi.socialnetwork.network.Post
 import java.util.*
@@ -23,14 +24,9 @@ class PostAdapter(private val posts: List<Post>): RecyclerView.Adapter<PostAdapt
         holder.postDescription.text = posts[position].body
         holder.postUsername.text = posts[position].userId.toString() // to replace with real username
         holder.postCreatedAt.text = Date().toString()
-        /**holder.dishName.text = posts[position].name.take(40)
-        holder.dishPrice.text = "${posts[position].prices[0].price} $"
-        if (dishes[position].images[0].isNotEmpty()) {
-            Picasso.get().load(dishes[position].images[0]).into(holder.dishImage);
+        posts[position].imageUrl?.let {
+            Picasso.get().load(posts[position].imageUrl).into(holder.postImage);
         }
-        holder.dishCardView.setOnClickListener {
-            cellClickListener.onCellClickListener(dishes[position])
-        }*/
     }
 
     override fun getItemCount(): Int {

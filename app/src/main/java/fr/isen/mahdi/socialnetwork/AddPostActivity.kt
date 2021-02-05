@@ -9,16 +9,17 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import fr.isen.mahdi.socialnetwork.databinding.ActivityPostBinding
+import fr.isen.mahdi.socialnetwork.databinding.ActivityAddPostBinding
 
-class PostActivity : AppCompatActivity() {
-    private lateinit var binding:ActivityPostBinding
+
+class AddPostActivity : AppCompatActivity() {
+    private lateinit var binding:ActivityAddPostBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPostBinding.inflate(layoutInflater)
+        binding = ActivityAddPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.uploadButton.setOnClickListener {
+        binding.imageView.setOnClickListener {
                 //check runtime permission
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                         if(checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostActivity">
+    tools:context=".AddPostActivity">
 
 
     <TextView
@@ -37,7 +37,9 @@
             android:id="@+id/titleArticle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/title" />
+            android:hint="@string/title"
+            android:textColorHint="#E62323"
+            android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -55,7 +57,8 @@
             android:id="@+id/descriptionArticle"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            android:hint="@string/description" />
+            android:hint="@string/description"
+            android:textColorHint="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -78,15 +81,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
         app:srcCompat="@drawable/ic_baseline_image_24" />
-
-    <Button
-        android:id="@+id/uploadButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/uploadButton"
-        app:layout_constraintBottom_toTopOf="@+id/img_pick_btn"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

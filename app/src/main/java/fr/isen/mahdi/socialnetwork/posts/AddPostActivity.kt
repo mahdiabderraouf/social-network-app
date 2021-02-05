@@ -1,7 +1,6 @@
-package fr.isen.mahdi.socialnetwork
+package fr.isen.mahdi.socialnetwork.posts
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -26,7 +25,9 @@ class AddPostActivity : AppCompatActivity() {
                         //permission denied
                         val permissions = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
                         //show popup to request runtime permission
-                        requestPermissions(permissions, PERMISSION_CODE)
+                        requestPermissions(permissions,
+                            PERMISSION_CODE
+                        )
                         }
                         else{
                         pickImageFromGallery()
@@ -44,7 +45,9 @@ class AddPostActivity : AppCompatActivity() {
             //Intent to pick image
             val intent = Intent(Intent.ACTION_PICK)
         intent.type ="image/*"
-        startActivityForResult(intent, IMAGE_PICK_CODE)
+        startActivityForResult(intent,
+            IMAGE_PICK_CODE
+        )
     }
     companion object{
         private val IMAGE_PICK_CODE=10

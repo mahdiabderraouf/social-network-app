@@ -13,7 +13,7 @@ import fr.isen.mahdi.socialnetwork.network.Post
 import java.util.*
 
 
-class PostAdapter(private val posts: List<Post>): RecyclerView.Adapter<PostAdapter.PostsViewHolder>() {
+class PostAdapter(private val posts: List<Post>, private val postCellClickListener: PostCellClickListener): RecyclerView.Adapter<PostAdapter.PostsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostsViewHolder {
         return PostsViewHolder(PostCellBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
@@ -26,6 +26,12 @@ class PostAdapter(private val posts: List<Post>): RecyclerView.Adapter<PostAdapt
         holder.postCreatedAt.text = Date().toString()
         posts[position].imageUrl?.let {
             Picasso.get().load(posts[position].imageUrl).into(holder.postImage);
+        }
+        holder.btnLike.setOnClickListener {
+            postCellClickListener.onLikeClickListener()
+        }
+        holder.btnComment.setOnClickListener {
+            postCellClickListener.onClickListener()
         }
     }
 

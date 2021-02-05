@@ -14,7 +14,7 @@ import com.google.firebase.ktx.Firebase
 import fr.isen.mahdi.socialnetwork.databinding.ActivityPostsBinding
 import fr.isen.mahdi.socialnetwork.network.Post
 
-class PostsActivity : AppCompatActivity() {
+class PostsActivity : AppCompatActivity(), PostCellClickListener {
     private lateinit var binding: ActivityPostsBinding
     private lateinit var database: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +47,16 @@ class PostsActivity : AppCompatActivity() {
     }
 
     private fun updateUi(posts: List<Post>) {
-        val adapter = PostAdapter(posts)
+        val adapter = PostAdapter(posts, this)
         binding.posts.layoutManager = LinearLayoutManager(this)
         binding.posts.adapter = adapter
+    }
+
+    override fun onLikeClickListener() {
+        // Like listener
+    }
+
+    override fun onClickListener() {
+        // Start detail activity
     }
 }

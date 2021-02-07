@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.isen.mahdi.socialnetwork">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,9 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialNetwork">
-
-        <activity android:name=".posts.AddPostActivity"></activity>
-
+        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".posts.AddPostActivity" />
         <activity android:name=".posts.PostsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

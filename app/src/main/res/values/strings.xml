@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Social Network</string>
 
-    <string name="title">Article Title</string>
-    <string name="name">Ajouter un article</string>
+    <string name="title">Titre de poste</string>
+    <string name="name">Ajouter un Poste</string>
     <string name="description">Description</string>
     <string name="add">Poster</string>
 

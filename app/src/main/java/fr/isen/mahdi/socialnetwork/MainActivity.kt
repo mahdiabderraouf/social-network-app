@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val intent = Intent(this, PostsActivity::class.java)
+        val intent = Intent(this, AddPostActivity::class.java)
 
         startActivity(intent)
     }

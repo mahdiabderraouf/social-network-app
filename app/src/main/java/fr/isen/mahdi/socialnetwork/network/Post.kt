@@ -5,11 +5,11 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 class Post(
-    var userId: Int? = 0,
-    var id: Int? = 0,
-    var title: String? = "",
-    var body: String? = "",
-    var imageUrl: String? = ""
+        var userId: Int? = 0,
+        var id: String? = "",
+        var title: String? = "",
+        var body: String? = "",
+        var imageUrl: String? = ""
 ) {
 
     @Exclude

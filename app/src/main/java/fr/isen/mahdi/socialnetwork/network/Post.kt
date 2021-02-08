@@ -1,15 +1,16 @@
 package fr.isen.mahdi.socialnetwork.network
 
+import android.net.Uri
 import com.google.firebase.database.Exclude
 import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 class Post(
-        var userId: Int? = 0,
-        var id: String? = "",
-        var title: String? = "",
-        var body: String? = "",
-        var imageUrl: String? = ""
+    var userId: String? = "",
+    var id: String? = "",
+    var title: String? = "",
+    var body: String? = "",
+    var imageUrl: String? = ""
 ) {
 
     @Exclude

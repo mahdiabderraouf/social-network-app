@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialNetwork">
-        <activity android:name=".TestActivity"></activity>
         <activity android:name=".posts.AddPostActivity" />
         <activity android:name=".posts.PostsActivity" />
         <activity android:name=".authentication.SignInActivity" />
